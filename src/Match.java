@@ -44,8 +44,8 @@ public class Match {
 
     /**
      * Calculcates whether the game is over and returns a value that indicates which player won the game.
-     * @param player1Score
-     * @param player2Score
+     * @param player1Score Player 1 current score.
+     * @param player2Score Player 2 current score.
      * @return Value indicating whether play 1 or player 2 won the set. 0 is returned if the set is still on.
      */
     private byte isSetOver(int player1Score, int player2Score){
@@ -134,16 +134,16 @@ public class Match {
 
         // Determine which player scored a point.
         if (isPlayer1 == true) {
-            player1score++;
-
-            if (player1score == 4 && player2score == 4)
+            if (player2score == 4)
                 player2score = 3;
+            else
+                player1score++;
         }
         else{
-            player2score++;
-
-            if (player2score == 4 && player1score == 4)
+            if (player1score == 4)
                 player1score = 3;
+            else
+                player2score++;
         }
 
         this.updateSetScores(this.currentSet, player1score, player2score);
