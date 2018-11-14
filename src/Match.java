@@ -3,12 +3,12 @@
  */
 public class Match {
 
-    private static byte NONE = 0;
-    private static byte PLAYER_1 = 1;
-    private static byte PLAYER_2 = 2;
+    private final static byte NONE = 0;
+    private final static byte PLAYER_1 = 1;
+    private final static byte PLAYER_2 = 2;
 
     private boolean matchComplete;
-    private byte currentSet = 0;
+    private byte currentSet;
     private int scoreSet1Player1;
     private int scoreSet1Player2;
     private int scoreSet2Player1;

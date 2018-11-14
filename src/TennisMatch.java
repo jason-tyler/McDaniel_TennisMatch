@@ -5,7 +5,7 @@ import java.util.Scanner;
  */
 public class TennisMatch {
 
-    private static String EMPTY = "";
+    private final static String EMPTY = "";
 
     /**
      * Main method of the application.
